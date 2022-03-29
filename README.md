@@ -1,0 +1,1 @@
+dragalia-dialogue-runner
