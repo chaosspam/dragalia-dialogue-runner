@@ -17,7 +17,7 @@ Make sure the structure is `[Project Directory]/dragalia-dialogue-runner/game` a
 ## Planned
 
 - [ ] Finish animating emotion balloons
-- [ ] Chararcter rpy file generator
+- [x] Chararcter rpy file generator (still need improvement)
 - [ ] UI for choice screen, not really a Dragalia feature but think about the possibilities
 
 ## Probably Too Much Work for Chao
@@ -26,7 +26,7 @@ Make sure the structure is `[Project Directory]/dragalia-dialogue-runner/game` a
 
 ## Usage
 
-There is not really a lot done yet. But I'll document this as I go 
+There is not really a lot done yet. But I'll document this as I go
 
 ### script.rpy
 
@@ -37,11 +37,11 @@ Just a few things that might make life a bit easier
 ```python
 define character_variable = Character("character_name", kind=character_base, callback=speaker("callback_identifier")
 ```
-`character_variable` - used in say statements to make this character say things, ex: `character_variable "Lorem Ipsum"` 
+`character_variable` - used in say statements to make this character say things, ex: `character_variable "Lorem Ipsum"`
 
 `kind=character_base` - make sure to include this for the click to continue arrow to appear
 
-`character_name` - this will appear in the name box on screen 
+`character_name` - this will appear in the name box on screen
 
 `callback_identifier` - this is used for lip flaping when speaking, see `characters/\[character\].rpy` section for details
 
@@ -68,6 +68,8 @@ hide note
 ### characters/\[character\].rpy
 
 This is the file that defines a character. It should include images used for the portrait of a character. (To save data, I did not include the portrait data files for all of the characters, you can download portrait data from [DLPortraits](https://github.com/sh0wer1ee/DLPortraits), just copy the folder containing the character in `portrait_data` to `images/portrait_data` folder in the project, Fleur is included as an example). The file itself probably has better documentation than I can write here so just read the comments there for now.
+
+You can generate the `.rpy` file with [charagen](https://spam.bychao.com/dialogue-runner-charagen/), but you will have to download the portrait images separately as described above
 
 Just make sure
 ```python
